@@ -33,7 +33,7 @@ def part1(seeds):
 
 
 def part2():
-    seeds_pairs = list(zip(seeds[::2], seeds[1::2]))
+    seeds_pairs = sorted(list(zip(seeds[::2], seeds[1::2])), key=lambda x: x[1])
     ans = float('inf')
     for seed_s, seed_l in seeds_pairs:
         seed_s = int(seed_s)
