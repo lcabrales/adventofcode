@@ -41,10 +41,10 @@ def part1():
 
 def part2():
     current_keys = [key for key in nodes if key.endswith('A')]
-    steps_l = []
+    ans_l = []
     for key in current_keys:
-        steps_l.append(solve_key(key))
-    print(math.lcm(*steps_l)) # answer
+        ans_l.append(solve_key(key))
+    print(math.lcm(*ans_l)) # answer
 
 
 part1()
