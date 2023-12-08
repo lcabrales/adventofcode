@@ -1,5 +1,4 @@
 from timeit import default_timer as timer
-from datetime import timedelta
 
 file_path = 'day5.txt'
 
@@ -39,13 +38,9 @@ def part2():
         seed_s = int(seed_s)
         seed_l = int(seed_l)
 
-        start = timer()
         r = range(seed_s, seed_s + seed_l)
-        print(r)
         for seed in r:
             ans = process_seed(seed, ans)
-        end = timer()
-        print(f"current ans: {ans} - {timedelta(seconds=end-start)}")
     return ans
 
 
